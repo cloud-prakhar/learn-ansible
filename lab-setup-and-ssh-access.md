@@ -58,7 +58,7 @@ Notice that **Ansible is not installed in the container.** That's the agentless 
 
 ## 3. Start the lab servers
 
-From inside the `ansible-basic` folder:
+From inside the `learn-ansible` folder:
 
 ```bash
 docker compose up -d --build

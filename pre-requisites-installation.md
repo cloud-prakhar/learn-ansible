@@ -3,7 +3,6 @@
 1. A Linux shell (Linux, macOS or WSL2 on Windows)
 2. Ansible installed and working
 3. Docker installed and working (to run lab servers)
-4. This `ansible-basic` folder on their machine
 ---
 
 ## 1. What we need to know before starting
@@ -70,7 +69,7 @@ wsl --install -d Ubuntu-24.04
 
 Restart when asked, open "Ubuntu" from the Start menu, and create a Linux username and password. **Run every command in this course inside the Ubuntu (WSL) terminal**, not in PowerShell.
 
-> **Important WSL tip:** keep course files inside the Linux filesystem (for example `~/ansible-basic`), **not** under `/mnt/c/...`.
+> **Important WSL tip:** keep course files inside the Linux filesystem (for example `~/learn-ansible`), **not** under `/mnt/c/...`.
 > Windows folders appear world-writable inside WSL, and Ansible **ignores `ansible.cfg` in world-writable folders** for security reasons. Block 05 explains why.
 
 ## 4. Install Ansible

@@ -1,0 +1,28 @@
+services:
+  web1:
+    build: .
+    image: ansible-lab-node:latest
+    container_name: web1
+    hostname: web1
+    ports:
+      - "2221:22"
+      - "8081:80"
+
+  web2:
+    image: ansible-lab-node:latest
+    container_name: web2
+    hostname: web2
+    depends_on:
+      - web1
+    ports:
+      - "2222:22"
+      - "8082:80"
+
+  db1:
+    image: ansible-lab-node:latest
+    container_name: db1
+    hostname: db1
+    depends_on:
+      - web1
+    ports:
+      - "2223:22"

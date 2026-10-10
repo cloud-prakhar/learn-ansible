@@ -248,7 +248,7 @@ docker compose down              # stop and delete the containers
 docker compose up -d             # new containers from the same image
 ```
 
-Everything learners changed on the servers is gone, **including the copied SSH key**. Ansible now fails with:
+Everything change on the servers is gone, **including the copied SSH key**. Ansible now fails with:
 
 ```text
 web1 | UNREACHABLE! =>

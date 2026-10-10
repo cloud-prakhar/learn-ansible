@@ -6,9 +6,9 @@
 4. This `ansible-basic` folder on their machine
 ---
 
-## 1. What learners need to know before starting
+## 1. What we need to know before starting
 
-Learners do not need to be Linux experts, but these basics help:
+We do not need to be Linux experts, but these basics help:
 
 | Skill | Why it matters | Example |
 |-------|----------------|---------|
@@ -77,7 +77,7 @@ Restart when asked, open "Ubuntu" from the Start menu, and create a Linux userna
 
 ### `ansible` vs `ansible-core`
 
-Two Python packages exist, and learners often ask which one to install:
+Two Python packages exist, and we often ask which one to install:
 
 | Package | What you get | When to use |
 |---------|--------------|-------------|

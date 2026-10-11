@@ -1,0 +1,28 @@
+---
+
+- name: Create app dir
+  hosts: all
+  become: true
+  gather_facts: true 
+
+  vars:
+    app_dirs:
+      - /opt/shop
+      - /opt/business
+      - /opt/hr
+      - /opt/finance
+
+  tasks:
+    - name: Create application directory
+      ansible.builtin.file:
+        path: "{{ item }}"
+        state: directory
+        mode: "0666"
+      loop: "{{ app_dirs }}"
+    
+    - name: create user
+      ansible.builtin.user:
+        name: "{{ item.name }}"
+        shell: "{{ item.shell}}"
+        state: present
+      loop: "{{ team_users }}"

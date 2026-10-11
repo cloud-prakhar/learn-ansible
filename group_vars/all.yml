@@ -2,3 +2,12 @@
 app_name: shopapp
 app_env: development
 admin_email: ops@example.com
+
+
+team_users:
+  - name: alice
+    shell: /bin/bash
+  - name: bob
+    shell: /bin/bash
+  - name: john
+    shell: /bin/bash

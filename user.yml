@@ -1,0 +1,14 @@
+---
+
+- name: Create users
+  hosts: all
+  become: true
+  gather_facts: true 
+
+  tasks:
+    - name: create team users group
+      ansible.builtin.user:
+        name: "{{ item.name }}"
+        shell: "{{ item.shell}}"
+        state: present
+      loop: "{{ team_users }}"

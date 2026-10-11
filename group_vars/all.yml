@@ -1,0 +1,4 @@
+
+app_name: shopapp
+app_env: development
+admin_email: ops@example.com

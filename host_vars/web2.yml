@@ -1,0 +1,3 @@
+server_role: backup
+site_color: "#d84315"
+app_env: staging   

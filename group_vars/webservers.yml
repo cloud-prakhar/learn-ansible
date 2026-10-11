@@ -1,0 +1,10 @@
+# nginx setting (used by the templates in block 04 and the webserver role)
+http_port: 80
+
+# Web page settings
+site_title: "ShopApp Web Tier"
+site_color: "#1e88e5"
+
+# Extra packages only web servers need
+web_packages:
+  - nginx

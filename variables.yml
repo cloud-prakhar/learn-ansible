@@ -1,0 +1,22 @@
+- name: Show variables from group_vars and host_vars
+  hosts: all
+  gather_facts: true              # we only print variables, no facts needed
+
+  tasks:
+    - name: Variables every host gets from group_vars/all.yml
+      ansible.builtin.debug:
+        msg: "app={{ app_name }} env={{ app_env }} admin={{ admin_email }}"
+
+    - name: Groups this host belongs to (built-in variable group_names)
+      ansible.builtin.debug:
+        var: group_names
+
+    - name: Web settings (group_vars/webservers.yml + host_vars/<host>.yml)
+      ansible.builtin.debug:
+        msg: "role={{ server_role }} color={{ site_color }} port={{ http_port }}"
+      when: "'webservers' in group_names"   # only web1 and web2 have these
+
+    - name: DB settings (group_vars/dbservers.yml)
+      ansible.builtin.debug:
+        msg: "redis port={{ redis_port }} maxmemory={{ redis_maxmemory }}"
+      when: "'dbservers' in group_names"
